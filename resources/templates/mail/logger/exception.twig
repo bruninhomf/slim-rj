@@ -1,0 +1,43 @@
+<html>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+    <title>{{ env.get('app_name') }}</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 30px;
+            font: 12px / 1.5 Helvetica, Arial, Verdana, sans-serif;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 48px;
+            font-weight: normal;
+            line-height: 48px;
+        }
+
+        strong {
+            display: inline-block;
+            width: 65px;
+        }
+    </style>
+</head>
+<body><p>The application could not run because of the following error:</p>
+<h2>Details</h2>
+<div><strong>Type:</strong>{{ class }}</div>
+<div><strong>Code:</strong> {{ exception.getCode() }}</div>
+<div><strong>Message:</strong> {{ exception.getMessage() }}</div>
+<div><strong>File:</strong> {{ exception.getFile() }}</div>
+<div><strong>Line:</strong> {{ exception.getLine() }}</div>
+<h2>Trace</h2>
+<pre>{{ exception.getTraceAsString() }}</pre>
+
+<h2>Session</h2>
+<pre>{{ print_r(session) }}</pre>
+
+<h2>Environment</h2>
+<div><strong>IP:</strong>{{ ip }}</div>
+<div><strong>Browser:</strong></div>
+<pre>{{ print_r(browser) }}</pre>
+</body>
+</html>

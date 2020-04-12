@@ -1,0 +1,91 @@
+{% extends 'layout/app.twig' %}
+{%  block content %}
+<!--==========================
+    Intro Section
+============================-->
+<section id="intro" style="height: 30px">
+    <div class="">
+        <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active" style="height: 30vh">
+                    <div class="carousel-background"><img src="{{ asset('img/intro-carousel/banner_pagina.jpg') }}" alt="" style="width: 20px !important;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- #intro -->
+
+    <!--==========================
+              About Us Section
+    ============================-->
+    <section id="about">
+        <div class="container">
+
+            <header class="section-header">
+                <h3>Blog</h3>
+                <p>Nós disponibilizamos alguns artigos para informar e retira algumas dúvidas mais frequentes,
+                    a idéias é disponibilizar conteúdos de uma maneira clara, concisa e fidedigna, assim possamos
+                    auxiliar nos problemas que forem surgindo e nas novas ideias a serem implementadas.</p>
+            </header>
+
+            <div class="row about-cols">
+
+                <div class="col-md-4 wow fadeInUp">
+                    <div class="about-col">
+                        <div class="img">
+                            <img src="{{ asset('img/dedetizacao.jpg') }}" alt="" class="img-fluid">
+                            <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                        </div>
+                        <h2 class="title"><a href="#">Porque é importante fazer a dedetização?</a></h2>
+                        <p>
+                            O principal motivo é evitar as doenças que pragas urbanas, tais como baratas, formigas e roedores,
+                            podem carregar em seu corpo contaminando todos os lugares por onde passam ou também através de picadas.
+                            Por exemplo formigas são as maiores responsáveis por contaminação hospitalar, carregam em suas patas e
+                            corpo uma grande quantidade de bactérias, fungos e outros microrganismos...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="about-col">
+                        <div class="img">
+                            <img src="{{ asset('img/legislacao.jpg') }}" alt="" class="img-fluid">
+                            <div class="icon"><i class="ion-ios-list-outline"></i></div>
+                        </div>
+                        <h2 class="title"><a href="#">Qual é a Lei que delimita as regras de condomínio?</a></h2>
+                        <p>
+                            Controlar um condomínio significa sempre procurar que os moradores cumpram com suas
+                            responsabilidades e se preocupem com o bem-estar coletivo. Como é um espaço de convívio
+                            social, existem leis que ajudam a delimitar as regras.
+
+                            A principal lei de rege as regras do condomínio é o Código Civil e é com base nele que
+                            o regimento interno e a convenção do condomínio devem ser baseadas...
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="about-col">
+                        <div class="img">
+                            <img src="{{ asset('img/regimento_interno.jpg') }}" alt="" class="img-fluid">
+                            <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+                        </div>
+                        <h2 class="title"><a href="#">O que é o regimento interno do condomínio?</a></h2>
+                        <p>
+                            O regimento interno do condomínio é o documento onde todas as regras para manter a
+                            convivência e harmonia estão reunidas. Deve ser de fácil acesso aos moradores,
+                            afinal, é onde estão as orientações sobre como agir e aproveitar os espaços de uso comum.
+
+                            O regimento deve englobar outros documentos importantes, como o Código Civil, as
+                            regras do condomínio e a convenção do condomínio...
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- #Blog -->
+{% endblock %}

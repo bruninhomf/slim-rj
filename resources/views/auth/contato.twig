@@ -1,0 +1,116 @@
+{% extends 'layout/app.twig' %}
+{%  block content %}
+    <!--==========================
+        Intro Section
+      ============================-->
+    <section id="intro" style="height: 30px">
+        <div class="">
+            <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active" style="height: 30vh">
+                        <div class="carousel-background"><img src="{{ asset('img/intro-carousel/banner_pagina.jpg') }}" alt="" style="width: 20px !important;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- #intro -->
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact" class="section-bg wow fadeInUp">
+        <div class="container">
+
+            <div class="section-header">
+                <h3>Contato</h3>
+                <p>Preencha o formulário abaixo para nós enviar dúvidas, sugestões, orçamentos ou outros assuntos.</p>
+            </div>
+
+            <div class="row contact-info">
+
+                <div class="col-md-4">
+                    <div class="contact-address">
+                        <i class="ion-ios-location-outline"></i>
+                        <h3>Endereço</h3>
+                        <address>
+                            Praça Rio Branco nº133<br>
+                            Belo Horizonte - MG
+                        </address>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="contact-phone">
+                        <i class="ion-ios-telephone-outline"></i>
+                        <h3>Telefone</h3>
+                        <p><a href="tel:+3136545614">(31) 3654-5614</a></p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="contact-email">
+                        <i class="ion-ios-email-outline"></i>
+                        <h3>E-mail</h3>
+                        <p><a href="mailto:info@example.com">contato@rjotaconservadora.com.br</a></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form">
+                <form method="post" role="form" class="contactForm">
+                    {{ csrf.field|raw }}
+                    <div id="sendmessage">Your message has been sent. Thank you!</div>
+                    <div class="form-group">
+                        <select class="form-control" name="setor" id="setor" data-rule="minlen:4" data-msg="Selecione um serviço." required>
+                            <option value="setor">Setor a ser direcionado</option>
+                            <option value="comercial">Comercial</option>
+                            <option value="financeiro">Financeiro</option>
+                            <option value="administrativo">Administrativo</option>
+                        </select>
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Nome" data-rule="minlen:4" data-msg="Digite o seu nome" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" data-rule="email" data-msg="Digite o seu e-mail para contato" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" name="assunto" id="assunto" placeholder="Assunto" data-rule="minlen:4" data-msg="Digite o assunto" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" name="phone" id="phone" placeholder="Telefone" data-rule="minlen:4" data-msg="Digite um telefone para contato" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensagem"></textarea>
+                        <div class="validation"></div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit">Enviar Mensagem</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <iframe
+                class="pt-5"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3753.841865923363!2d-43.994995!3d-19.804301!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa68e3be6d4bda9%3A0x92472f94144b1357!2sPra%C3%A7a%20Rio%20Branco%2C%20133%20-%20Lagoinha%20Leblon%2C%20Belo%20Horizonte%20-%20MG%2C%2031575-120!5e0!3m2!1spt-BR!2sbr!4v1583554818362!5m2!1spt-BR!2sbr"
+                width="100%"
+                height="600"
+                frameborder="0"
+                style="border:0;"
+                allowfullscreen="">
+        </iframe>
+    </section>
+    <!-- #contact -->
+{% endblock %}

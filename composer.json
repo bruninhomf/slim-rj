@@ -1,0 +1,51 @@
+{
+
+  "name": "login-usaexchang",
+  "description": "Usa Exchang",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Bruno Firmiano",
+      "email": "bruno.firmiano@inovedados.com.br"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "brunofirmiano/slim": "dev-master",
+    "slim/csrf": "^0.8.1",
+    "slim/flash": "^0.2.0",
+    "slim/twig-view": "^2.3",
+    "respect/validation": "^1.1",
+    "phpmailer/phpmailer": "^6.0",
+    "php-curl-class/php-curl-class": "^8.3",
+    "tplaner/when": "^2.1",
+    "nesbot/carbon": "2.17.0 as 1.36.2",
+    "symfony/contracts": "^1.1",
+    "sail/useragent": "dev-master",
+    "symfony/var-dumper": "^4.3",
+    "ext-json": "*",
+    "ext-fileinfo": "*",
+    "ext-curl": "*",
+    "ext-pdo": "*",
+    "ext-bcmath": "*",
+    "illuminate/database": "^6.4",
+    "illuminate/events": "^6.4"
+  },
+  "config": {
+    "vendor-dir" : "vendor",
+    "optimize-autoloader": false
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "Services\\": "services/"
+    },
+    "files": [
+      "config/app.php",
+      "config/crypto.php",
+      "config/database.php",
+      "config/mail.php",
+      "config/time.php"
+    ]
+  }
+}

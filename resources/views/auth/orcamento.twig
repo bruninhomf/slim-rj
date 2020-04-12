@@ -1,0 +1,114 @@
+{% extends 'layout/app.twig' %}
+{%  block content %}
+    <!--==========================
+        Intro Section
+      ============================-->
+    <section id="intro" style="height: 30px">
+        <div class="">
+            <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active" style="height: 30vh">
+                        <div class="carousel-background"><img src="{{ asset('img/intro-carousel/banner_pagina.jpg') }}" alt="" style="width: 20px !important;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- #intro -->
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact" class="section-bg wow fadeInUp">
+        <div class="container">
+
+            <div class="section-header">
+                <h3>Orçamento</h3>
+                <p>Preencha o formulário abaixo para nós enviar uma solicitação de orçamento.</p>
+            </div>
+
+            <div class="form">
+                <div id="sendmessage">Your message has been sent. Thank you!</div>
+                <div id="errormessage"></div>
+                <form method="post" role="form" class="contactForm">
+                    {{ csrf.field|raw }}
+                    <div class="form-group">
+                        <select class="form-control" name="quem" id="tipo" data-rule="minlen:4" required>
+                            <option>Quem é você?</option>
+                            <option>Pessoa fisica</option>
+                            <option>Pessoa jurídica</option>
+                            <option>Condomínio</option>
+                            <option>Grupo empresarial</option>
+                        </select>
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Nome" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" name="address" id="address" placeholder="Endereço" data-rule="address" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" name="phone" class="form-control" id="phone" placeholder="Telefone" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validation"></div>
+                        </div>
+                    </div>
+                    <h5 class="pt-3" style="color: #111; font-weight: 600">Serviços:</h5>
+                    <div class="form-group form-row pl-4">
+                        <div class="custom-control col-md-5 custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Portaria 24hs</label>
+                        </div>
+                        <div class="custom-control col-md-5 custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                            <label class="custom-control-label" for="customCheck2">Conservação e Limpeza</label>
+                        </div>
+                        <div class="custom-control col-md-2 custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                            <label class="custom-control-label" for="customCheck3">Jardinagem</label>
+                        </div>
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group form-row pl-4">
+                        <div class="custom-control col-md-5 custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck4">
+                            <label class="custom-control-label" for="customCheck4">Vigias Noturnos/Obras</label>
+                        </div>
+                        <div class="custom-control col-md-5 custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck5">
+                            <label class="custom-control-label" for="customCheck5">Zeladoria</label>
+                        </div>
+                        <div class="custom-control col-md-2 custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck6">
+                            <label class="custom-control-label" for="customCheck6">Recepcionista</label>
+                        </div>
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group form-row pl-4 pb-4">
+                        <div class="custom-control col-md-4 custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck7">
+                            <label class="custom-control-label" for="customCheck7">Dedetização</label>
+                        </div>
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensagem"></textarea>
+                        <div class="validation"></div>
+                    </div>
+                    <div class="text-center"><button type="submit">Enviar Mensagem</button></div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <!-- #contact -->
+{% endblock %}

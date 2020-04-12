@@ -1,0 +1,431 @@
+{% extends 'layout/app.twig' %}
+{%  block content %}
+
+    <!--==========================
+    Intro Section
+    ============================-->
+    <section id="intro">
+        <div class="intro-container">
+            <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+
+                <ol class="carousel-indicators"></ol>
+
+                <div class="carousel-inner" role="listbox">
+
+                    <div class="carousel-item">
+                        <div class="carousel-background">
+                            <img src="{{ asset('img/intro-carousel/portaria.jpg') }}" alt="">
+                        </div>
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2>Controle de Acesso Portaria 24hs</h2>
+                                <p>
+                                    O porteiro é o cartão de visita do condomínio, peça fundamental,
+                                    especialmente para a segurança do condomínio.
+                                    {#
+                                    A R.Jota Conservadora investe para que nossos profissionais estejam
+                                    sempre preparados e receptivos ao filtrar e realizar o controle de
+                                    acesso de visitantes, moradores e prestadores de serviços.
+
+                                    Boa postura, pontualismo e conhecimento de suas atribuições são
+                                    critérios indispensáveis para fazer parte de nossa equipe e
+                                    consequentemente ofertar o melhor para nossos clientes.
+                                    #}
+                                </p>
+                                <a href="#featured-services" class="btn-get-started scrollto">Leia mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item active">
+                        <div class="carousel-background">
+                            <img src="{{ asset('img/intro-carousel/conservação.jpg') }}" alt="">
+                        </div>
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2>Conservação e Limpeza de Condomínios</h2>
+                                <p>
+                                    Serviço dimensionado com a necessidade do cliente, planejamento e
+                                    acompanhamento da higienização e conservação dos ambientes.
+                                    {#
+                                    Estudo de cronogramas especificando locais e horários a serem limpos
+                                    bem com identificar quais produtos são indicados para cada tipo de superfície.
+
+                                    Equipamentos que facilitam e contribuem para o melhor desempenho de nossos colaboradores.
+                                    #}
+                                </p>
+                                <a href="#featured-services" class="btn-get-started scrollto">Leia mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="carousel-background">
+                            <img src="{{ asset('img/intro-carousel/jardinagem.jpg') }}" alt="">
+                        </div>
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2>Jardinagem</h2>
+                                <p>
+                                    Um jardim bem cuidado torna o ambiente mais agradável.
+                                    {#
+                                    Está sob as responsabilidades de um Jardineiro fazer a manutenção da
+                                    grama, cortar e regar, cultivar canteiros, plantar sementes, conservar
+                                    áreas ajardinadas, adubar e arar adequadamente as áreas verdes,
+                                    removendo folhagens secas mantendo a limpeza e uma boa estética.
+                                    #}
+                                </p>
+                                <a href="#featured-services" class="btn-get-started scrollto">Leia mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="carousel-background">
+                            <img src="{{ asset('img/intro-carousel/ferramentas.jpg') }}" alt="">
+                        </div>
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2>Zeladoria</h2>
+                                <p>
+                                    Está sob as responsabilidades de um Zelador transmitir as ordens
+                                    emanadas dos seus superiores hierárquicos e fiscalizar o seu
+                                    cumprimento, fiscalizar as áreas de uso comum dos condôminos
+                                    ou inquilinos, verificar o funcionamento das instalações elétricas
+                                    e hidráulicas do edifício, assim como os aparelhos de uso comum,
+                                    além de zelar pelo sossego e pela observância da disciplina no
+                                    edifício, de acordo com o seu regimento interno ou com as normas
+                                    afixadas na portaria, assim como o atendimento a moradores zelando
+                                    sempre para o bom funcionamento e o bem-estar do condomínio.
+                                    {#
+                                    Para que o profissional tenha um bom desempenho como Zelador é
+                                    essencial que possua flexibilidade e responsabilidade.
+                                    #}
+                                </p>
+                                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {#
+                    <div class="carousel-item">
+                        <div class="carousel-background">
+                            <img src="{{ asset('img/intro-carousel/dedetização.jpg') }}" alt="">
+                        </div>
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2>Dedetização</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                    laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    #}
+
+                    <div class="carousel-item">
+                        <div class="carousel-background">
+                            <img src="{{ asset('img/intro-carousel/vigilante.jpg') }}" alt="">
+                        </div>
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2>Vigias Noturnos/Obras</h2>
+                                <p>
+                                    Atua no controle de acesso de visitantes, colaboradores,
+                                    prestadores de serviços, veículos, caminhões e equipamentos.
+                                    {#
+                                    Realiza vistorias e rondas sistemáticas em todas as dependências.
+                                    #}
+                                </p>
+                                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="carousel-background">
+                            <img src="{{ asset('img/intro-carousel/recepcionista1.jpg') }}" alt="">
+                        </div>
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2>Recepcionista</h2>
+                                <p>
+                                    Recepcionar bem visitantes e clientes faz toda a diferença.
+                                    A R.Jota Conservadora oferece profissionais para atuar na
+                                    recepção, atender e filtrar ligações, anotar recados e receber
+                                    visitas, se responsabilizar pela compra de materiais de
+                                    escritório e higiene, fazer o direcionamento de ligações, envio
+                                    e controle de correspondências, esclarecer dúvidas, receber
+                                    correspondências ou produtos, processar a correspondência
+                                    recebida, organizá-los e distribuir para o destinatário,
+                                    executar arquivamento de documentos, marcar reuniões, controlar
+                                    as chaves e registrar informações.
+                                </p>
+                                <a href="#featured-services" class="btn-get-started scrollto">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="carousel-background"><img src="{{ asset('img/intro-carousel/2.jpg') }}" alt=""></div>
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2>Vantagens de terceirizar serviços</h2>
+                                <p>
+                                    Quando se pensa a médio e longo prazo, o serviço de terceirização de
+                                    mão de obra pode reduzir os custos de sua empresa. Isso acontece devido
+                                    a  uma das características já citadas: o serviço é mais qualificado.
+                                    {#
+                                    Com isso, são gerados menos gastos com trocas de funcionários e menos
+                                    desperdício de máquinas e produtos.
+                                    #}
+                                </p>
+                                <a href="#featured-services" class="btn-get-started scrollto">Leia mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+
+                <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+    <!-- #intro -->
+
+    <main id="main">
+        <!--==========================
+          Resumo da História
+        ============================-->
+        <section id="call-to-action" class="wow fadeIn">
+            <div class="container text-center">
+                <h3>Nossa História</h3>
+                <p>
+                    A R. JOTA Conservadora é uma empresa mineira que nasceu em BH para atender
+                    à crescente demanda por serviços terceirizados especializados.
+
+                    Com uma equipe altamente treinada, a empresa é referência na terceirização
+                    de serviços, oferecendo soluções sob medida para todas as suas demandas:
+                    limpeza e conservação,
+                    serviços de portaria,
+                    segurança patrimonial,
+                    serviços corporativos,
+                    manutenção industrial,
+                    limpeza industrial,
+                    terceirização de mão de obra,
+                    entre outras soluções.
+                    Esses serviços terceirizados oferecidos pela R. JOTA Conservadora representam
+                    uma ferramenta poderosa que, quando bem explorada, pode ajudar as instituições
+                    e empresas a reduzir seus custos, bem como melhorar profundamente a qualidade
+                    de seus processos.
+                </p>
+                <a class="cta-btn" href="{{ path_for('auth.sobre') }}">Leia mais</a>
+            </div>
+        </section>
+
+        <!-- #Resumo da História -->
+
+        <!--==========================
+          Facts Section
+        ============================-->
+        <section id="facts"  class="wow fadeIn">
+            <div class="container">
+
+                <header class="section-header">
+                    <h3>Relatório rápido</h3>
+                    <p>
+                        O relatório tem por finalidade expor informações sobre um decreto, uma decisão, um projeto,
+                        uma atividade, uma pesquisa ou algo semelhante, a fim de prestar contas, sejam financeiras
+                        ou administrativas.
+                    </p>
+                </header>
+
+                <div class="row counters">
+
+                    <div class="col-lg-3 col-6 text-center">
+                        <span data-toggle="counter-up">274</span>
+                        <p>Clientes em atendimento</p>
+                    </div>
+
+                    <div class="col-lg-3 col-6 text-center">
+                        <span data-toggle="counter-up">421</span>
+                        <p>Projeto em andamento</p>
+                    </div>
+
+                    <div class="col-lg-3 col-6 text-center">
+                        <span data-toggle="counter-up">1,364</span>
+                        <p>Pessoas beneficiadas</p>
+                    </div>
+
+                    <div class="col-lg-3 col-6 text-center">
+                        <span data-toggle="counter-up">18</span>
+                        <p>Colaboradores</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- #facts -->
+
+        <!--==========================
+          Depoimento de clientes
+        ============================-->
+        <section id="testimonials" class="section-bg wow fadeInUp">
+            <div class="container">
+
+                <header class="section-header">
+                    <h3>Depoimentos</h3>
+                </header>
+
+                <div class="owl-carousel testimonials-carousel">
+
+                    <div class="testimonial-item">
+                        <img src="{{ asset('img/clientes/testimonial-1.jpg') }}" class="testimonial-img" alt="">
+                        <h3>Washington</h3>
+                        <h4>Sindico - AP Ponto</h4>
+                        <p>
+                            <img src="{{ asset('img/quote-sign-left.png') }}" class="quote-sign-left" alt="">
+                            Estamos satisfeitos com os serviços prestados, principalmente com a gestão dos funcionários e a atenção dada à limpeza no condomínio.
+                            <img src="{{ asset('img/quote-sign-right.png') }}" class="quote-sign-right" alt="">
+                        </p>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <img src="{{ asset('img/clientes/testimonial-2.jpg') }}" class="testimonial-img" alt="">
+                        <h3>Sara Wilsson</h3>
+                        <h4>Sindica - Ville Tunisia</h4>
+                        <p>
+                            <img src="{{ asset('img/quote-sign-left.png') }}" class="quote-sign-left" alt="">
+                            Contamos com um bom atendimento por parte dos funcionários alocados nos setores e pelo pessoal da retaguarda.
+                            <img src="{{ asset('img/quote-sign-right.png') }}" class="quote-sign-right" alt="">
+                        </p>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <img src="{{ asset('img/clientes/testimonial-3.jpg') }}" class="testimonial-img" alt="">
+                        <h3>Juliana</h3>
+                        <h4>Sindica - Pinheiros</h4>
+                        <p>
+                            <img src="{{ asset('img/quote-sign-left.png') }}" class="quote-sign-left" alt="">
+                            Nossa maior dificuldade era administrar as faltas dos funcionários, contratamos a Fider e hoje temos tranqüilidade neste quesito.
+                            <img src="{{ asset('img/quote-sign-right.png') }}" class="quote-sign-right" alt="">
+                        </p>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <img src="{{ asset('img/clientes/bruno2.jpg') }}" class="testimonial-img" alt="">
+                        <h3>Bruno</h3>
+                        <h4>Sindico - Araucarias </h4>
+                        <p>
+                            <img src="{{ asset('img/quote-sign-left.png') }}" class="quote-sign-left" alt="">
+                            A Fider tem nos prestado serviços com seriedade e disponibilidade para resolver os problemas comuns, sempre enviam alguém para supervisionar o pessoal no prédio.
+                            <img src="{{ asset('img/quote-sign-right.png') }}" class="quote-sign-right" alt="">
+                        </p>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <img src="{{ asset('img/clientes/testimonial-5.jpg') }}" class="testimonial-img" alt="">
+                        <h3>Allan</h3>
+                        <h4>Subsindico - Laranjeiras</h4>
+                        <p>
+                            <img src="{{ asset('img/quote-sign-left.png') }}" class="quote-sign-left" alt="">
+                            A Conservadora Fider sempre nos atendeu com atenção, nos encaminhando funcionários comprometidos e bem apresentáveis.
+                            <img src="{{ asset('img/quote-sign-right.png') }}" class="quote-sign-right" alt="">
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- #testimonials -->
+
+        <!--==========================
+              Artigos
+            ============================-->
+        <section id="about">
+            <div class="container">
+
+                <header class="section-header">
+                    <h3>Artigos</h3>
+                    <p>Nós disponibilizamos alguns artigos para informar e retira algumas dúvidas mais frequentes,
+                        a idéias é disponibilizar conteúdos de uma maneira clara, concisa e fidedigna, assim possamos
+                        auxiliar nos problemas que forem surgindo e nas novas ideias a serem implementadas.</p>
+                </header>
+
+                <div class="row about-cols">
+
+                    <div class="col-md-4 wow fadeInUp">
+                        <div class="about-col">
+                            <div class="img">
+                                <img src="{{ asset('img/dedetizacao.jpg') }}" alt="" class="img-fluid">
+                                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                            </div>
+                            <h2 class="title"><a href="#">Porque é importante fazer a dedetização?</a></h2>
+                            <p>
+                                O principal motivo é evitar as doenças que pragas urbanas, tais como baratas, formigas e roedores,
+                                podem carregar em seu corpo contaminando todos os lugares por onde passam ou também através de picadas.
+                                Por exemplo formigas são as maiores responsáveis por contaminação hospitalar, carregam em suas patas e
+                                corpo uma grande quantidade de bactérias, fungos e outros microrganismos...
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="about-col">
+                            <div class="img">
+                                <img src="{{ asset('img/legislacao.jpg') }}" alt="" class="img-fluid">
+                                <div class="icon"><i class="ion-ios-list-outline"></i></div>
+                            </div>
+                            <h2 class="title"><a href="#">Qual é a Lei que delimita as regras de condomínio?</a></h2>
+                            <p>
+                                Controlar um condomínio significa sempre procurar que os moradores cumpram com suas
+                                responsabilidades e se preocupem com o bem-estar coletivo. Como é um espaço de convívio
+                                social, existem leis que ajudam a delimitar as regras.
+
+                                A principal lei de rege as regras do condomínio é o Código Civil e é com base nele que
+                                o regimento interno e a convenção do condomínio devem ser baseadas...
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="about-col">
+                            <div class="img">
+                                <img src="{{ asset('img/regimento_interno.jpg') }}" alt="" class="img-fluid">
+                                <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+                            </div>
+                            <h2 class="title"><a href="#">O que é o regimento interno do condomínio?</a></h2>
+                            <p>
+                                O regimento interno do condomínio é o documento onde todas as regras para manter a
+                                convivência e harmonia estão reunidas. Deve ser de fácil acesso aos moradores,
+                                afinal, é onde estão as orientações sobre como agir e aproveitar os espaços de uso comum.
+
+                                O regimento deve englobar outros documentos importantes, como o Código Civil, as
+                                regras do condomínio e a convenção do condomínio...
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- #Artigos -->
+
+    </main>
+
+{% endblock %}

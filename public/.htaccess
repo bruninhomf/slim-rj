@@ -1,0 +1,20 @@
+#Desativa a listagem de diretorios
+Options -Indexes
+
+#Ativa o modRewrite
+RewriteEngine On
+
+#Redireciona todas as requisições para index.php
+#RewriteBase "/painel/"
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+<IfModule mod_php7.c>
+   php_value post_max_size 200M
+   php_value upload_max_filesize 200M
+   php_value memory_limit 300M
+   php_value max_execution_time 600
+   php_value max_input_time 300
+   php_value session.gc_maxlifetime 1200
+</IfModule>

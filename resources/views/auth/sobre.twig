@@ -1,0 +1,90 @@
+{% extends 'layout/app.twig' %}
+{%  block content %}
+<!--==========================
+    Intro Section
+============================-->
+<section id="intro" style="height: 30px">
+    <div class="">
+        <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active" style="height: 30vh">
+                    <div class="carousel-background"><img src="{{ asset('img/intro-carousel/banner_pagina.jpg') }}" alt="" style="width: 20px !important;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- #intro -->
+
+<!--==========================
+          About Us Section
+============================-->
+<section id="about">
+    <div class="container">
+
+        <header class="section-header">
+            <h3>Sobre</h3>
+            <p>
+                A R. JOTA Conservadora é uma empresa mineira que nasceu em BH para atender à
+                crescente demanda por serviços terceirizados especializados. Com uma equipe
+                altamente treinada, a empresa é referência na terceirização de serviços,
+                oferecendo soluções sob medida para todas as suas demandas: limpeza e
+                conservação, serviços de portaria, segurança patrimonial, serviços
+                corporativos, manutenção industrial, limpeza industrial, terceirização de
+                mão de obra, entre outras soluções. Esses serviços terceirizados oferecidos
+                pela R. JOTA Conservadora representam uma ferramenta poderosa que, quando
+                bem explorada, pode ajudar as instituições e empresas a reduzir seus custos,
+                bem como melhorar profundamente a qualidade de seus processos.
+            </p>
+        </header>
+
+        <div class="row about-cols">
+
+            <div class="col-md-4 wow fadeInUp">
+                <div class="about-col">
+                    <div class="img">
+                        <img src="{{ asset('img/about-mission.jpg') }}" alt="" class="img-fluid">
+                        <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                    </div>
+                    <h2 class="title"><a href="#">Missão</a></h2>
+                    <p>
+                        Atender de forma ágil, dinâmica e adequada às necessidades
+                        dos nossos clientes, atingindo níveis superiores de qualidade e satisfação.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="about-col">
+                    <div class="img">
+                        <img src="{{ asset('img/about-plan.jpg') }}" alt="" class="img-fluid">
+                        <div class="icon"><i class="ion-ios-list-outline"></i></div>
+                    </div>
+                    <h2 class="title"><a href="#">Planejamento</a></h2>
+                    <p>
+                        Ser a melhor empresa de Gestão de Condomínios, limpeza e portaria de
+                        Belo Horizonte e região, utilizando tecnologia de ponta e profissionais qualificados.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="about-col">
+                    <div class="img">
+                        <img src="{{ asset('img/about-vision.jpg') }}" alt="" class="img-fluid">
+                        <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+                    </div>
+                    <h2 class="title"><a href="#">Visão</a></h2>
+                    <p>
+                        Ser a melhor empresa de Gestão de Condomínios, limpeza e portaria de
+                        Belo Horizonte e região, utilizando tecnologia de ponta e profissionais qualificados.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- #about -->
+{% endblock %}
