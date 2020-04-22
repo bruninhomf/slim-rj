@@ -22,7 +22,7 @@ define('APP_MAIL', [
     'pass'        => 'af9578475b6603',
     'port'        =>  2525,
     'charset'     => 'utf-8',
-    'encryption'  => 'tls',
+    'encryption'  => 'STARTTLS',
     'debug'       => false,
     'from'        => [
         'name'    => APP_NAME,

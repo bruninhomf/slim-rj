@@ -29,8 +29,8 @@
 
             <div class="form">
                 <div id="sendmessage">Your message has been sent. Thank you!</div>
-                <div id="errormessage"></div>
-                <form method="post" role="form" class="contactForm">
+                <div id="errormessage">Error</div>
+                <form method="post" role="form">
                     {{ csrf.field|raw }}
                     <div class="form-group">
                         <input type="text" name="name" class="form-control" id="name" placeholder="Nome Completo" data-rule="minlen:4" data-msg="Digite o seu nome">

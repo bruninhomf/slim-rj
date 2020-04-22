@@ -128,9 +128,9 @@ class AuthController extends Controller {
 
         if($request->isPost()){
 
-            Mailer::to(["comercial@rjotaconservadora.com.br"])
+            Mailer::to(["bruninhomf1@gmail.com"])
                 ->subject('Teste')
-                ->template('mail.send.send_contato',$request->all())
+                ->template('mail.send.send_orcamento',$request->all())
                 ->send();
 
             //usuário não existe
@@ -159,7 +159,7 @@ class AuthController extends Controller {
             Mailer::to(["rh@rjotaconservadora.com.br"])
                 ->subject('Teste')
                 ->attachment('file')
-                ->template('mail.send.send_contato',$request->all())
+                ->template('mail.send.send_trabalhe_conosco',$request->all())
                 ->send();
 
             //usuário não existe

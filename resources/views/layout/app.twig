@@ -32,6 +32,7 @@
           Author: BootstrapMade.com
           License: https://bootstrapmade.com/license/
         ======================================================= -->
+
     </head>
 
     <body>
@@ -56,16 +57,23 @@
                         <li><a href="{{ path_for('auth.sobre') }}">Sobre</a></li>
                         <li><a href="{{ path_for('auth.servicos') }}">Serviços</a></li>
                         <li><a href="{{ path_for('auth.blog') }}">Blog</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Contate-nos
-                            </a>
-                            <div class="dropdown-menu bg-transparent border-0 text-left list-inline" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item bg-transparent list-inline-item d-block" href="{{ path_for('auth.orcamento') }}">Orçamento</a>
-                                <a class="dropdown-item bg-transparent list-inline-item d-block" href="{{ path_for('auth.trabalheConosco') }}">Trabalhe Conosco</a>
-                                <a class="dropdown-item bg-transparent list-inline-item d-block" href="{{ path_for('auth.contato') }}">Contato</a>
+                        <div class="nav-item dropdown ">
+                            <a class="ml-2 nav-link dropdown-toggle dropdown-item bg-transparent" href="{{ path_for('auth.contato') }}">Contato</a>
+                            <div class="dropdown-content">
+                                <a class="dropdown-item bg-transparent" href="{{ path_for('auth.orcamento') }}">Orçamento</a>
+                                <a class="dropdown-item bg-transparent" href="{{ path_for('auth.trabalheConosco') }}">Trabalhe Conosco</a>
                             </div>
-                        </li>
+                        </div>
+{#                        <li class="nav-item dropdown">#}
+{#                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">#}
+{#                                Contate-nos#}
+{#                            </a>#}
+{#                            <div class="dropdown-menu bg-transparent border-0 text-left list-inline" aria-labelledby="navbarDropdownMenuLink">#}
+{#                                <a class="dropdown-item bg-transparent list-inline-item d-block" href="{{ path_for('auth.orcamento') }}">Orçamento</a>#}
+{#                                <a class="dropdown-item bg-transparent list-inline-item d-block" href="{{ path_for('auth.trabalheConosco') }}">Trabalhe Conosco</a>#}
+{#                                <a class="dropdown-item bg-transparent list-inline-item d-block" href="{{ path_for('auth.contato') }}">Contato</a>#}
+{#                            </div>#}
+{#                        </li>#}
                     </ul>
                 </nav>
                 <!-- #nav-menu-container -->

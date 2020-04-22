@@ -1599,3 +1599,27 @@ select:focus{
 #customFile:focus{
   box-shadow: none !important;
 }
+
+/* Dropdown menu contato*/
+.dropdown {
+  min-width: 190px;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-item {
+  text-shadow: 0 0 3px #000, 0 0 3px #000;
+}
