@@ -12,13 +12,13 @@ use App\Middlewares\Auth\AuthenticatedMiddleware as Authenticated;
 
 //autenticação
 
-$this->any('/Inicio', 'AuthController:inicio')->unrestricted()->setName('auth.inicio');
-$this->any('/Sobre', 'AuthController:sobre')->unrestricted()->setName('auth.sobre');
-$this->any('/Servicos', 'AuthController:servicos')->unrestricted()->setName('auth.servicos');
-$this->any('/Orcamento', 'AuthController:orcamento')->unrestricted()->setName('auth.orcamento');
-$this->any('/Blog', 'AuthController:blog')->unrestricted()->setName('auth.blog');
-$this->any('/Trabalheconosco', 'AuthController:trabalheConosco')->unrestricted()->setName('auth.trabalheConosco');
-$this->any('/Contato', 'AuthController:contato')->unrestricted()->setName('auth.contato');
+$this->any('/', 'AuthController:inicio')->unrestricted()->setName('auth.inicio');
+$this->any('/sobre', 'AuthController:sobre')->unrestricted()->setName('auth.sobre');
+$this->any('/servicos', 'AuthController:servicos')->unrestricted()->setName('auth.servicos');
+$this->any('/orcamento', 'AuthController:orcamento')->unrestricted()->setName('auth.orcamento');
+$this->any('/blog', 'AuthController:blog')->unrestricted()->setName('auth.blog');
+$this->any('/trabalheconosco', 'AuthController:trabalheConosco')->unrestricted()->setName('auth.trabalheConosco');
+$this->any('/contato', 'AuthController:contato')->unrestricted()->setName('auth.contato');
 
 //rotas base
 $this->group('/app', function(){

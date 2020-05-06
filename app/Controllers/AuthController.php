@@ -189,9 +189,9 @@ class AuthController extends Controller {
             $email = null;
 
             if ($setor == 'comercial'){
-                $email = 'bruninhomf@msn.com';
+                $email = 'comercial@rjotaconservadora.com.br';
             }elseif ($setor == 'financeiro'){
-                $email = 'bruninhomf@yahoo.com.br';
+                $email = 'financeiro@rjotaconservadora.com.br';
             }elseif ($setor == 'administrativo'){
                 $email = 'adm@rjotaconservadora.com.br';
             }else {

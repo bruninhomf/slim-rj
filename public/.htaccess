@@ -3,6 +3,8 @@ Options -Indexes
 
 #Ativa o modRewrite
 RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 #Redireciona todas as requisições para index.php
 #RewriteBase "/painel/"
