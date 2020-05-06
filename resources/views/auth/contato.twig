@@ -63,36 +63,47 @@
                     {{ csrf.field|raw }}
                     <div id="sendmessage">Your message has been sent. Thank you!</div>
                     <div class="form-group">
-                        <select class="form-control" name="setor" id="setor" data-rule="minlen:5" data-msg="Selecione um serviço." required>
+                        <select class="form-control" name="setor" id="setor" data-rule="minlen:5" data-msg="Selecione um setor." required onclick="remove()">
                             <option value="">Setor a ser direcionado</option>
+                            <option value="atendimento">Atendimento</option>
                             <option value="comercial">Comercial</option>
-                            <option value="financeiro">Financeiro</option>
-                            <option value="administrativo">Administrativo</option>
+                        </select>
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group d-none">
+                        <select class="form-control" name="tipo" id="tipo" data-rule="minlen:5" data-msg="Selecione um tipo." required>
+                            <option value="">Tipo</option>
+                            <option value="informacao">Informações</option>
+                            <option value="reclamacao">Reclamações</option>
+                            <option value="duvida">Dúvidas</option>
                         </select>
                         <div class="validation"></div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Nome" data-rule="minlen:4" data-msg="Digite o seu nome" required>
+                        <div class="form-group col-md-6 d-none">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Nome" data-rule="minlen:4" data-msg="Digite o seu nome" required>
                             <div class="validation"></div>
                         </div>
-                        <div class="form-group col-md-6">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" data-rule="email" data-msg="Digite o seu e-mail para contato" required>
+                        <div class="form-group col-md-6 d-none">
+                            <input type="text" class="form-control" name="condominio" id="condominio" placeholder="Condomínio" data-rule="minlen:4" data-msg="Digite o nome do condomínio" required>
                             <div class="validation"></div>
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control" name="assunto" id="assunto" placeholder="Assunto" data-rule="minlen:4" data-msg="Digite o assunto" required>
+                        <div class="form-group col-md-6  d-none">
+                            <input type="number" class="form-control" min="1" max="500" name="torres" id="torres" placeholder="Qtd. torres" data-rule="minlen:1" data-msg="Digite a quantidade de torres" required>
                             <div class="validation"></div>
                         </div>
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-6 d-none">
                             <input type="text" class="form-control" name="phone" id="phone" placeholder="Telefone" data-rule="minlen:4" data-msg="Digite um telefone para contato" required>
                             <div class="validation"></div>
                         </div>
+                        <div class="custom-file form-group mb-3 d-none mx-1">
+                            <input type="file" class="form-control custom-file-input" id="file" data-rule="minlen:4" data-msg="Envie um arquivo" required>
+                            <div class="validation"></div>
+                            <label class="custom-file-label" for="customFile">Selecione o arquivo a ser feito os uploads.</label>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Digite a mensagem a ser enviada" placeholder="Mensagem" required></textarea>
+                    <div class="form-group d-none">
+                        <textarea class="form-control" name="message" id="message" rows="5" data-rule="required" data-msg="Digite a mensagem a ser enviada" placeholder="Mensagem" required></textarea>
                         <div class="validation"></div>
                     </div>
                     <div class="text-center">
@@ -102,6 +113,37 @@
             </div>
 
         </div>
+        <script>
+            function remove(){
+                if ($("#setor").val()[0] === "a") {
+                    document.getElementById('tipo').parentNode.classList.remove('d-none')
+                    document.getElementById('name').parentNode.classList.remove('d-none')
+                    document.getElementById('phone').parentNode.classList.remove('d-none')
+                    document.getElementById('file').parentNode.classList.remove('d-none')
+                    document.getElementById('message').parentNode.classList.remove('d-none')
+                    document.getElementById('torres').parentNode.classList.add('d-none')
+                    document.getElementById('condominio').parentNode.classList.add('d-none')
+
+                } else if ($("#setor").val()[0] === "c"){
+                    document.getElementById('name').parentNode.classList.remove('d-none')
+                    document.getElementById('condominio').parentNode.classList.remove('d-none')
+                    document.getElementById('torres').parentNode.classList.remove('d-none')
+                    document.getElementById('phone').parentNode.classList.remove('d-none')
+                    document.getElementById('message').parentNode.classList.remove('d-none')
+                    document.getElementById('tipo').parentNode.classList.add('d-none')
+                    document.getElementById('file').parentNode.classList.add('d-none')
+                } else {
+                    document.getElementById('name').parentNode.classList.add('d-none')
+                    document.getElementById('condominio').parentNode.classList.add('d-none')
+                    document.getElementById('torres').parentNode.classList.add('d-none')
+                    document.getElementById('phone').parentNode.classList.add('d-none')
+                    document.getElementById('message').parentNode.classList.add('d-none')
+                    document.getElementById('tipo').parentNode.classList.add('d-none')
+                    document.getElementById('file').parentNode.classList.add('d-none')
+                }
+            }
+            remove();
+        </script>
         <iframe
                 class="pt-5"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3753.841865923363!2d-43.994995!3d-19.804301!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa68e3be6d4bda9%3A0x92472f94144b1357!2sPra%C3%A7a%20Rio%20Branco%2C%20133%20-%20Lagoinha%20Leblon%2C%20Belo%20Horizonte%20-%20MG%2C%2031575-120!5e0!3m2!1spt-BR!2sbr!4v1583554818362!5m2!1spt-BR!2sbr"
