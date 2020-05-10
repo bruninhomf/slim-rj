@@ -1599,3 +1599,8 @@ select:focus{
 #customFile:focus{
   box-shadow: none !important;
 }
+
+.custom-file-label {
+  border-radius: 0px;
+  box-shadow:none !important;
+ }
