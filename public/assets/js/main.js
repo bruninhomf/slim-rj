@@ -204,3 +204,18 @@
   });
 
 })(jQuery);
+
+  //Select form contact
+
+$('#setor').change(function(){
+  if ($("#setor").val()[0] === "a") {
+    $('#torres, #condominio').parent().removeClass('d-block');
+    $('#tipo, #name, #phone, #file, #message').parent().addClass('d-block')
+
+  } else if ($("#setor").val()[0] === "c"){
+    $('#tipo, #file').parent().removeClass('d-block');
+    $('#name, #condominio, #torres, #phone, #message').parent().addClass('d-block')
+  } else {
+    $('#tipo, #name, #torres, #condominio, #phone, #file, #message').parent().removeClass('d-block')
+  }
+});
