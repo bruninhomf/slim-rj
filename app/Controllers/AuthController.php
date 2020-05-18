@@ -8,11 +8,14 @@
 
 namespace App\Controllers;
 
+use App\Extensions\Support\Arr;
 use App\Extensions\Support\Date;
 use App\Extensions\Support\Str;
 use App\Util\Mailer;
+use App\Util\Storage;
 use Slim\Http\Request;
 use Slim\Http\Response;
+use Slim\Http\UploadedFile;
 
 class AuthController extends Controller {
 
@@ -185,27 +188,33 @@ class AuthController extends Controller {
     */
     public function contato(Request $request, Response $response){
         if($request->isPost()){
+
+            $attachment = Arr::get($request->getUploadedFiles(), 'attachment');
+
             $setor = $request->get('setor');
             $email = null;
 
-            if ($setor == 'comercial'){
+            if ($setor == 'atendimento'){
+                $email = 'atendimento@rjotaconservadora.com.br';
+            }elseif ($setor == 'comercial'){
                 $email = 'comercial@rjotaconservadora.com.br';
-            }elseif ($setor == 'financeiro'){
-                $email = 'financeiro@rjotaconservadora.com.br';
-            }elseif ($setor == 'administrativo'){
-                $email = 'adm@rjotaconservadora.com.br';
             }else {
                     var_dump('alert');
             }
 
-
-            Mailer::to(["$email"])
+            $mail = Mailer::to(["bruninhomf@gmail.com"])
                 ->subject('Teste')
-                ->template('mail.send.send_contato',$request->all())
-                ->send();
+                ->template('mail.send.send_contato',$request->all());
+
+            if ($attachment) {
+                $mime = Arr::get(explode('/',$attachment->getClientMediaType()), 1);
+                $mail->attachment(['path' => $attachment->file, 'name' => "anexo.{$mime}"]);
+            }
+
+            $mail->send();
 
             //usuário não existe
-            $this->flash('error', 'The data provided is invalid.');
+            $this->flash('success', 'Mensagem enviada com sucesso.');
 
             //redireciona para a recuperação
             return $response->withRedirect(
@@ -213,6 +222,7 @@ class AuthController extends Controller {
             );
 
         }else{
+            $this->flash('error', 'Error');
             return $this->view('auth', 'contato');
         }
 
