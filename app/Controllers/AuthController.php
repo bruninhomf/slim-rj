@@ -202,7 +202,7 @@ class AuthController extends Controller {
                     var_dump('alert');
             }
 
-            $mail = Mailer::to(["bruninhomf@gmail.com"])
+            $mail = Mailer::to(["$email"])
                 ->subject('Teste')
                 ->template('mail.send.send_contato',$request->all());
 
