@@ -22,11 +22,11 @@ define('APP_MAIL', [
     'pass'        => 'af9578475b6603',
     'port'        =>  2525,
     'charset'     => 'utf-8',
-    'encryption'  => 'STARTTLS',
+    'encryption'  => 'SSL',
     'debug'       => false,
     'from'        => [
         'name'    => APP_NAME,
-        'address' => 'bruninhomf1@gmail.com',
+        'address' => 'site@rjotaconservadora.com.br',
     ],
     'smtp'        => [
         'ssl'     => [
