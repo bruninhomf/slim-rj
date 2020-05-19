@@ -59,7 +59,7 @@
             </div>
 
             <div class="form">
-                <form method="post" role="form" enctype="multipart/form-data" accept="image/png|image/jpg|application/pdf">
+                <form method="post" role="form" enctype="multipart/form-data" accept="image/png|image/jpg|application/pdf|application/vnd.openxmlformats-officedocument.wordprocessingml.document">
                     {{ csrf.field|raw }}
                     {% if flash.getMessage('success') != null %}
                         <div class="alert alert-success mb-3" role="alert">
@@ -106,7 +106,7 @@
                             <div class="validation"></div>
                         </div>
                         <div class="custom-file form-group mb-3 d-none mx-1">
-                            <input type="file" name="attachment" class="form-control custom-file-input" id="file" data-rule="minlen:4" data-msg="Envie um arquivo" required>
+                            <input type="file" name="attachment" class="form-control custom-file-input" id="file" data-rule="minlen:4" data-msg="Envie um arquivo">
                             <div class="validation"></div>
                             <label class="custom-file-label" for="customFile">Selecione o arquivo a ser feito os uploads.</label>
                         </div>
